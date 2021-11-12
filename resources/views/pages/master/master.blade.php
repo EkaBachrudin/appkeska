@@ -92,10 +92,10 @@
             </a>
           </li>
           <li class="nav-item">
-            <a href="#" class="nav-link">
+            <a href="/dataFasilitas" class="nav-link">
               <i class="nav-icon fas fa-th"></i>
               <p>
-                Data ----
+                Data Fasilitas
               </p>
             </a>
           </li>

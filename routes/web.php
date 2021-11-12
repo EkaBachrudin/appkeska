@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\Controller;
+use App\Http\Controllers\DataFasilitasController;
 use App\Http\Controllers\DataSekolahController;
 use Illuminate\Support\Facades\Route;
 
@@ -31,5 +32,12 @@ Route::group(['middleware' => 'auth'], function () {
     Route::post('/dataSekolah/store', [DataSekolahController::class, 'store']);
     Route::post('/dataSekolah/update/{id}', [DataSekolahController::class, 'update']);
     Route::get('/dataSekolah/delete/{id}', [DataSekolahController::class, 'delete']);
+
+    //data fasilitas
+    Route::get('/dataFasilitas/getData/{id}', [DataFasilitasController::class, 'getData']);
+    Route::get('/dataFasilitas', [DataFasilitasController::class, 'index']);
+    Route::post('/dataFasilitas/store', [DataFasilitasController::class, 'store']);
+    Route::post('/dataFasilitas/update/{id}', [DataFasilitasController::class, 'update']);
+    Route::get('/dataFasilitas/delete/{id}', [DataFasilitasController::class, 'delete']);
 });
 require __DIR__.'/auth.php';

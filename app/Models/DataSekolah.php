@@ -13,4 +13,8 @@ class DataSekolah extends Model
 
     protected $guarded = [];
 
+    public function fasilitas(){
+        return $this->hasMany(DataFasilitas::class);
+    }
+
 }
