@@ -107,6 +107,14 @@
               </p>
             </a>
           </li>
+          <li class="nav-item">
+            <a href="/dataSiswa" class="nav-link">
+              <i class="nav-icon fas fa-th"></i>
+              <p>
+                Data Siswa
+              </p>
+            </a>
+          </li>
         </ul>
       </nav>
       <!-- /.sidebar-menu -->

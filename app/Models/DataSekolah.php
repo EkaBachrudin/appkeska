@@ -21,4 +21,8 @@ class DataSekolah extends Model
         return $this->hasMany(DataGuru::class);
     }
 
+    public function siswa(){
+        return $this->hasMany(DataSiswa::class);
+    }
+
 }

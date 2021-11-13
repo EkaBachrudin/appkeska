@@ -4,6 +4,7 @@ use App\Http\Controllers\Controller;
 use App\Http\Controllers\DataFasilitasController;
 use App\Http\Controllers\DataGuruController;
 use App\Http\Controllers\DataSekolahController;
+use App\Http\Controllers\DataSiswaController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -47,5 +48,12 @@ Route::group(['middleware' => 'auth'], function () {
     Route::post('/dataGuru/store', [DataGuruController::class, 'store']);
     Route::post('/dataGuru/update/{id}', [DataGuruController::class, 'update']);
     Route::get('/dataGuru/delete/{id}', [DataGuruController::class, 'delete']);
+
+    //data guru
+    Route::get('/dataSiswa/getData/{id}', [DataSiswaController::class, 'getData']);
+    Route::get('/dataSiswa', [DataSiswaController::class, 'index']);
+    Route::post('/dataSiswa/store', [DataSiswaController::class, 'store']);
+    Route::post('/dataSiswa/update/{id}', [DataSiswaController::class, 'update']);
+    Route::get('/dataSiswa/delete/{id}', [DataSiswaController::class, 'delete']);
 });
 require __DIR__.'/auth.php';
