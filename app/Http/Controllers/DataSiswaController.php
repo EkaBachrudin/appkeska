@@ -10,7 +10,7 @@ use Illuminate\Http\Request;
 class DataSiswaController extends Controller
 {
     public function index(){
-        $sekolahan = DataSekolah::get();
+        $sekolahan = DataSekolah::orderBy('jenjang', 'asc')->get();
         $siswa = DataSiswa::get();
         return view('pages.data_siswa.index', compact('sekolahan', 'siswa'));
     }

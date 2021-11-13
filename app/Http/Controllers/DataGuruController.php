@@ -10,7 +10,7 @@ use Illuminate\Http\Request;
 class DataGuruController extends Controller
 {
     public function index(){
-        $sekolahan = DataSekolah::get();
+        $sekolahan = DataSekolah::orderBy('jenjang', 'asc')->get();
         $guru = DataGuru::get();
         return view('pages.data_guru.index', compact('sekolahan', 'guru'));
     }

@@ -53,7 +53,7 @@
                                     <td> {{$item->nis}} </td>
                                     <td> {{$item->name}} </td>
                                     <td> {{$item->kelas}} </td>
-                                    <td> {{$item->sekolah->name}} </td>
+                                    <td> {{$item->sekolah->jenjang}} {{$item->sekolah->name}} </td>
                                     <td>
                                         <div class="btn text-primary" data-toggle="modal" data-target="#modalSiswa" onclick="edit({{$item->id}})"><i class="far fa-edit"></i></div>
                                         <a href="/dataSiswa/delete/{{$item->id}}" class="btn text-danger" onclick="return confirm('Are u sure delete this data ?')"><i class="far fa-trash-alt"></i></a>
@@ -87,7 +87,7 @@
                             <select name="sekolah" class="form-control">
                                 <option selected disabled>Pilih Sekolah</option>
                                 @foreach ($sekolahan as $item)
-                                <option value="{{$item->id}}"> {{$item->name}} </option>
+                                <option value="{{$item->id}}"> {{$item->jenjang}} {{$item->name}} </option>
                                 @endforeach
                             </select>
                         </div>

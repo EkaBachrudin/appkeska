@@ -36,9 +36,9 @@
                             <thead>
                                 <tr>
                                     <th>No</th>
-                                    <th>Sekolah</th>
-                                    <th>NIP</th>
                                     <th>Nama guru</th>
+                                    <th>NIP</th>
+                                    <th>Sekolah</th>
                                     <th>Action</th>
                                 </tr>
                             </thead>
@@ -49,9 +49,9 @@
                                 @foreach ($guru as $item)
                                     <tr>
                                         <td> {{$no++}} </td>
-                                        <td> {{$item->sekolah->name}} </td>
-                                        <td> {{$item->nip}} </td>
                                         <td> {{$item->name}} </td>
+                                        <td> {{$item->nip}} </td>
+                                        <td> {{$item->sekolah->jenjang}} {{$item->sekolah->name}} </td>
                                         <td>
                                             <div class="btn text-primary" data-toggle="modal" data-target="#modalGuru" onclick="edit({{$item->id}})"><i class="far fa-edit"></i></div>
                                             <a href="/dataGuru/delete/{{$item->id}}" class="btn text-danger" onclick="return confirm('Are u sure delete this data ?')"><i class="far fa-trash-alt"></i></a>
@@ -85,7 +85,7 @@
                             <select name="sekolah" class="form-control">
                                 <option selected disabled>Pilih Sekolah</option>
                                 @foreach ($sekolahan as $item)
-                                <option value="{{$item->id}}"> {{$item->name}} </option>
+                                <option value="{{$item->id}}">{{$item->jenjang}} {{$item->name}} </option>
                                 @endforeach
                             </select>
                         </div>
