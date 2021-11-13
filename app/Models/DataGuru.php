@@ -8,4 +8,13 @@ use Illuminate\Database\Eloquent\Model;
 class DataGuru extends Model
 {
     use HasFactory;
+
+    protected $table = 'data_gurus';
+
+    protected $guarded = [];
+
+    public function sekolah()
+    {
+        return $this->belongsTo(DataSekolah::class);
+    }
 }

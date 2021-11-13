@@ -17,4 +17,8 @@ class DataSekolah extends Model
         return $this->hasMany(DataFasilitas::class);
     }
 
+    public function guru(){
+        return $this->hasMany(DataGuru::class);
+    }
+
 }
