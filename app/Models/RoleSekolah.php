@@ -5,16 +5,22 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class RolePolice extends Model
+class RoleSekolah extends Model
 {
     use HasFactory;
 
-    protected $table = 'role_police';
+    protected $table = 'role_sekolahs';
 
     protected $guarded = [];
 
     public function role()
     {
-        return $this->belongsTo(Role::class);
+        return $this->hasMany(Role::class);
+    }
+
+    public function sekolah()
+    {
+        return $this->hasMany(DataSekolah::class);
     }
 }
+

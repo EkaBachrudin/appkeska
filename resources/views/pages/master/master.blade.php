@@ -76,7 +76,7 @@
       <nav class="mt-2">
         <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
           <li class="nav-item">
-            <a href="#" class="nav-link">
+            <a href="#" class="nav-link active">
               <i class="nav-icon fas fa-th"></i>
               <p>
                 Dashboard
@@ -112,6 +112,15 @@
               <i class="nav-icon fas fa-th"></i>
               <p>
                 Data Siswa
+              </p>
+            </a>
+          </li>
+          <li class="header text-light">SUPER ADMIN AREA</li>
+          <li class="nav-item">
+            <a href="/role" class="nav-link">
+              <i class="nav-icon fas fa-th text-info" ></i>
+              <p>
+                <strong class="text-info">Role permission</strong>
               </p>
             </a>
           </li>

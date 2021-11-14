@@ -25,4 +25,8 @@ class DataSekolah extends Model
         return $this->hasMany(DataSiswa::class);
     }
 
+    public function roleSekolah()
+    {
+        return $this->belongsTo(RoleSekolah::class);
+    }
 }

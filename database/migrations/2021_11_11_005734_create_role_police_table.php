@@ -21,6 +21,7 @@ class CreateRolePoliceTable extends Migration
             $table->tinyInteger('data_sekolah');
             $table->tinyInteger('data_guru');
             $table->tinyInteger('role_permission');
+            $table->tinyInteger('user');
             $table->timestamps();
         });
     }
